@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>The Crystal Collector Game</title>
+
+    <!-- Added a link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to css reset file-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to style sheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Added a link to a Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="text-center">The Crystal Collector Game</h1>
+        <h3 class="text-center">Guess • Strategize • Then Guess Again</h3>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <!-- Instructions Card -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <h3 class="card-header">How to play</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>• You will be given a random number at the start of the game.</li>
+                            <li>• There are four crystals below. When you click on a crystal, you will add a specific
+                                amount of points to your total score.</li>
+                            <li>• You win the game by matching your total score to the random number. You lose the game
+                                if your total score goes above the random number.</li>
+                            <li>• The value of each crystal is hidden from you until you click on it.</li>
+                            <li>• Each time when the game starts, you will be given a new random number and the values
+                                of each crystal will change.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- end of column -->
+
+        </div> <!-- end of row -->
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-lg-8">
+
+                <div class="card">
+
+                    <!-- this filled dynamically from game.js file -->
+                    <div class="card-header"> 
+                        <h3>Number to Guess: 
+                            <span id="numberToGuess"></span>
+                        </h3>
+                    </div>
+                              
+                    <div class="card-body">
+                        <h3>Your Total Score:&nbsp;
+                            <span id="scoreText"></span>
+                        </h3>
+                        <p>Click on a crystal to add to your total score</p>
+                        <div id="crystals"></div>
+                    </div>
+
+                </div> <!-- end of card -->  
+               
+            </div> <!-- end of column -->  
+            
+            <div class="col-lg-4">
+
+                <div class="card">
+                
+                    <div class="card-header">
+                        <h3>Score Card</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <h3>Wins:</h3>
+                        <span id="winsText"></span></p>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h3>Losses:</h3>
+                        <span id="lossesText"></span></p>
+                    </div>
+                    
+                </div> <!-- end of card -->
+
+            </div> <!-- end of column -->
+
+        </div> <!-- end of row -->
+
+    </div> <!-- end of container -->
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <footer class="py-4">
+                <p> &copy; copyright 2019 | Richard Fink | All rights reserved.</p>
+            </footer>
+        </div> <!-- end of column -->
+
+    </div> <!-- end of row -->
+
+    <!-- Added a link to my JavaScript file -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>

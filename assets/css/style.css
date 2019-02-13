@@ -1,0 +1,23 @@
+body {
+   background: url("https://cdn.dribbble.com/users/159888/screenshots/1872715/spelunking24-01.png") space;
+   background-size: cover;
+   font-family: 'Arima Madurai', cursive;
+}
+
+
+footer {
+    background: #e9ecef;
+    text-align: center;
+    margin-top: 40px;    
+}
+
+.big-font {
+    font-size: 20px;
+}
+
+.crystal-image {
+    display: inline;
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
