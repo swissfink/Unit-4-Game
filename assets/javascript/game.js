@@ -42,13 +42,9 @@ function newNumbersForCrystals() {
     // store the indicies in the "numberOptions" array.
     numberOptions.push(fourRandomNumbers);
   }
-
-
   
   function attachNumbersToCrystals() {
-    
-    
-    
+      
     // Initiate a loop to pair one of the four random numbers to a crystal.
     for (var i = 0; i < numberOptions.length; i++) {
 
@@ -61,7 +57,7 @@ function newNumbersForCrystals() {
 
       var fourImages = [ "https://pre00.deviantart.net/c200/th/pre/i/2016/363/1/4/rock_crystal_on_a_transparent_background__by_prussiaart-dat9yoo.png", "https://i.pinimg.com/originals/7a/1e/8c/7a1e8cbae81363b96096b4c5d0971705.png", "http://www.transparentpng.com/download/amethyst-stone/simple-ruby-light-ruby-ruby-diamond-mine-purple-diamond-purple-ruby-pictures-1.png", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Euclase-ed02a.jpg" ]
 
-      // Each imageCrystal will be given a src link to the crystal image
+      // Each imageCrystal will be given a src link to a unique crystal image
       imageCrystal.attr("src", fourImages[i]);
 
       // Each imageCrystal will also be given a data attribute called data-crystalValue.
@@ -118,7 +114,6 @@ function checkWin() {
     newNumbersForCrystals();
     document.getElementById("youwinText").style.cssText = "display: block";
     document.getElementById("message").style.cssText = "opacity: .9";
-    // resetGame();
   }
 
   // if the player goes over the number
@@ -129,7 +124,6 @@ function checkWin() {
     newNumbersForCrystals();
     document.getElementById("youloseText").style.cssText = "display: block";
     document.getElementById("message").style.cssText = "opacity: .9";
-    // resetGame();
   }
 
   document.getElementById("winsText").innerText = wins;
