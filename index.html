@@ -23,51 +23,52 @@
 </head>
 
 <body>
-
-    <div class="jumbotron">
-        <h1 class="text-center">The Crystal Collector Game</h1>
-        <h3 class="text-center">Guess • Strategize • Then Guess Again</h3>
-    </div>
-
     <div class="container">
-
+        <br>
         <div class="row">
-            <!-- Instructions Card -->
+
             <div class="col-lg-12">
+
                 <div class="card">
-                    <h3 class="card-header">How to play</h3>
+
+                    <div class="card-header text-center">
+                        <h1>The Crystal Collector Game</h1>
+                        <h3>Guess • Strategize • Then Guess Again</h3>
+                    </div>
+
+                    
                     <div class="card-body">
+                        <h3>How to play:</h3>
                         <ul>
-                            <li>• You will be given a random number at the start of the game.</li>
+                            <li>• You will be given a random number at the start of the game. This is the "Number to Guess".</li>
                             <li>• There are four crystals below. When you click on a crystal, you will add a specific
                                 amount of points to your total score.</li>
-                            <li>• You win the game by matching your total score to the random number. You lose the game
-                                if your total score goes above the random number.</li>
+                            <li>• You win the game by matching your total score to the "Number to Guess".</li> 
+                            <li>• You lose the game if your total score goes above the "Number to Guess".</li>
                             <li>• The value of each crystal is hidden from you until you click on it.</li>
-                            <li>• Each time when the game starts, you will be given a new random number and the values
-                                of each crystal will change.</li>
+                            <li>• Each time the game starts, you will be given a new random number and the values
+                                of each crystal will also change.</li>
                         </ul>
                     </div>
+
                 </div>
+            <br>
             </div> <!-- end of column -->
-
+            
         </div> <!-- end of row -->
-
-        <br>
 
         <div class="row">
 
-            <div class="col-lg-8">
-
+            <div class="col-lg-4">
+                   
                 <div class="card">
 
-                    <!-- this filled dynamically from game.js file -->
-                    <div class="card-header"> 
-                        <h3>Number to Guess: 
+                    <div class="card-header">
+                        <h3>Number to Guess:
                             <span id="numberToGuess"></span>
                         </h3>
                     </div>
-                              
+
                     <div class="card-body">
                         <h3>Your Total Score:&nbsp;
                             <span id="scoreText"></span>
@@ -76,47 +77,60 @@
                         <div id="crystals"></div>
                     </div>
 
-                </div> <!-- end of card -->  
-               
-            </div> <!-- end of column -->  
-            
+                </div> <!-- end of card -->
+
+                <br>
+
+            </div> <!-- end of column -->
+
+            <div class="col-lg-4" id="message">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center" id="youwinText">Yay! You won! Click on a crystal to play again!</h2>
+                        <h2 class="text-center" id="youloseText">Nuts! You didn't win. Click on a crystal to play again!</h2>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
             <div class="col-lg-4">
 
                 <div class="card">
-                
+
                     <div class="card-header">
                         <h3>Score Card</h3>
                     </div>
 
                     <div class="card-body">
-                        <h3>Wins:</h3>
-                        <span id="winsText"></span></p>
+                        <h3>Wins:
+                            <span id="winsText"></span>
+                        </h3>
                     </div>
-                    
+
                     <div class="card-body">
-                        <h3>Losses:</h3>
-                        <span id="lossesText"></span></p>
+                        <h3>Losses:
+                            <span id="lossesText"></span>
+                        </h3>
                     </div>
-                    
+
                 </div> <!-- end of card -->
 
+                <br>
+
             </div> <!-- end of column -->
+
+            <br>
 
         </div> <!-- end of row -->
 
     </div> <!-- end of container -->
 
-    <div class="row">
+    <footer class="text-muted">
+        <p> &copy; copyright 2019 | Richard Fink | All rights reserved.</p>
+    </footer>
 
-        <div class="col-lg-12">
-            <footer class="py-4">
-                <p> &copy; copyright 2019 | Richard Fink | All rights reserved.</p>
-            </footer>
-        </div> <!-- end of column -->
-
-    </div> <!-- end of row -->
-
-    <!-- Added a link to my JavaScript file -->
+    <!-- Added a link to my game JavaScript file -->
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>

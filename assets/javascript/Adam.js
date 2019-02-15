@@ -2,11 +2,15 @@ var playerScore = 0;
 var wins = 0;
 var losses = 0;
 
-document.getElementById("youwinText").style.cssText = "display: none";
-document.getElementById("youloseText").style.cssText = "display: none";
-document.getElementById("message").style.cssText = "opacity: .0";
-
 checkWin();
+
+// function resetGame() {
+
+// playerScore = 0;
+// newNumberToGuess();
+// newNumbersForCrystals();
+
+// }
 
 //newRandowmNumber SHOULD BE A VARIABLE, NOT AN ARRAY... IT ONLY NEEDS TO HOLD ONE VALUE AT A TIME
 var newRandomNumber = "";
@@ -59,7 +63,7 @@ function newNumbersForCrystals() {
       // This will allow the CSS to take effect.
       imageCrystal.addClass("crystal-image");
 
-      var fourImages = [ "https://pre00.deviantart.net/c200/th/pre/i/2016/363/1/4/rock_crystal_on_a_transparent_background__by_prussiaart-dat9yoo.png", "https://i.pinimg.com/originals/7a/1e/8c/7a1e8cbae81363b96096b4c5d0971705.png", "http://www.transparentpng.com/download/amethyst-stone/simple-ruby-light-ruby-ruby-diamond-mine-purple-diamond-purple-ruby-pictures-1.png", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Euclase-ed02a.jpg" ]
+      var fourImages = [ "https://pre00.deviantart.net/c200/th/pre/i/2016/363/1/4/rock_crystal_on_a_transparent_background__by_prussiaart-dat9yoo.png", "https://i.pinimg.com/originals/7a/1e/8c/7a1e8cbae81363b96096b4c5d0971705.png", "https://banner2.kisspng.com/20171220/tve/stone-png-5a3ad46daa6e35.77141639151380490969818406.jpg", "https://banner2.kisspng.com/20180420/vhe/kisspng-metal-coated-crystal-smoky-quartz-rock-mineral-5ada067a642067.4232315015242379464101.jpg" ]
 
       // Each imageCrystal will be given a src link to the crystal image
       imageCrystal.attr("src", fourImages[i]);
@@ -81,10 +85,6 @@ newNumbersForCrystals();
 //PUT THIS IN ITS OWN FUNCTION THAT CAN BE CALLED EACH TIME YOU PUT NEW CRYSTALS INTO THE PAGE
 function crystalClick(){
   $(".crystal-image").on("click", function() {
-     
-    document.getElementById("youwinText").style.cssText = "display: none";
-    document.getElementById("youloseText").style.cssText = "display: none";
-    document.getElementById("message").style.cssText = "opacity: .0";
 
     // Extract the value from the data attribute.
     // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
@@ -116,8 +116,6 @@ function checkWin() {
     playerScore = 0;
     newNumberToGuess();
     newNumbersForCrystals();
-    document.getElementById("youwinText").style.cssText = "display: block";
-    document.getElementById("message").style.cssText = "opacity: .9";
     // resetGame();
   }
 
@@ -127,8 +125,6 @@ function checkWin() {
     playerScore = 0;
     newNumberToGuess();
     newNumbersForCrystals();
-    document.getElementById("youloseText").style.cssText = "display: block";
-    document.getElementById("message").style.cssText = "opacity: .9";
     // resetGame();
   }
 
