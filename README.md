@@ -2,7 +2,7 @@
 
 ## A fun and interactive game for web browsers - This app dynamically updates HTML pages with the jQuery library.
 
-![Image of Crystal Collector Game Landing Page](https://github.com/qgwright/Group-Project-2/blob/master/public/images/callo-homepage.png)
+![Image of Crystal Collector Game Landing Page](https://github.com/swissfink/Unit-4-Game/blob/master/assets/images/crystal-game-featured-image.png)
 
 ### Guess • Strategize • Then Guess Again
 
